@@ -26,3 +26,35 @@ function przyciskEmail(){
         alert("Email wpisany poprawnie. Twój email to " + value)
     }
 };
+
+
+var  max = [];
+function maxOblicz(){
+    max7Value = document.getElementById('max7').value;
+    max = max7Value.split`,`.map(x=>+x);
+    var maxMax = Math.max(...max);
+    console.log(max);
+    console.log(maxMax);
+    document.getElementById("wynikMax").innerHTML = "Największa liczba z ciągu który podałeś to: " + maxMax;
+}
+
+
+
+function przyciskFibonacci()
+{
+    document.getElementById("wynikFibo").innerHTML = "Wartość elementu ciągu fibonacciego który podałeś to: " + fibo(document.getElementById("fiboPole").value);
+}
+
+function fibo(n)
+{
+    if (n === 0) return 0;
+    else if (n === 1) return 1;
+    else if (n > 1) {
+        return fibo(n - 1) + fibo(n - 2);
+    }
+};
+
+
+
+
+
